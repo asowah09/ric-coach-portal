@@ -11,6 +11,16 @@
 </head>
 <body>
   <div id="root"></div>
+  <script>
+    // Patch fetch to redirect Anthropic API calls through proxy
+    const _originalFetch = window.fetch;
+    window.fetch = function(url, options) {
+      if (typeof url === 'string' && url.includes('api.anthropic.com')) {
+        url = '/api/chat';
+      }
+      return _originalFetch(url, options);
+    };
+  </script>
   <script type="text/babel" data-presets="react" src="./portal.js"></script>
 </body>
 </html>
