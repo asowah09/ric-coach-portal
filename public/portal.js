@@ -7,7 +7,7 @@ const B = {
 };
 // ── Google Sheet API ─────────────────────────────────────────────────────────
 // After deploying your Apps Script, paste the Web App URL here:
-const SHEET_API_URL = "YOUR_APPS_SCRIPT_URL_HERE";
+const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbzPz881UVADSHX178PmZMUZ1yeeB35peqG87UiklVSYMAGDTGsgagbit5lCJs7jjMyk3g/exec";
 // Example: "https://script.google.com/macros/s/AKfy.../exec"
 
 async function fetchSheetAPI(params) {
